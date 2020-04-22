@@ -1,7 +1,7 @@
 const cors = require ('cors')
 
 const express = require('express') // Import express to a variable
-
+const { errors } = require('celebrate')
 const routes = require('./routes')
 
 const app = express();
@@ -12,6 +12,7 @@ app.use(express.json()) // 'Diz' para o EXPRESS que está sendo usado JSON
 
 app.use(routes)
 
+app.use(errors())
 /*
     Rota / Recurso
 */
