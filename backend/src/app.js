@@ -1,18 +1,15 @@
 const cors = require ('cors')
-
 const express = require('express') // Import express to a variable
 const { errors } = require('celebrate')
 const routes = require('./routes')
-
 const app = express();
 
 app.use(cors())
-
 app.use(express.json()) // 'Diz' para o EXPRESS que está sendo usado JSON
-
 app.use(routes)
-
 app.use(errors())
+module.exports = app
+
 /*
     Rota / Recurso
 */
@@ -43,5 +40,3 @@ app.use(errors())
     - DRIVER: SELECT * FROM... (Query do banco)
     - QUERY BUILDER: table('users').select('*').where...
 */
-
-app.listen(3333)
