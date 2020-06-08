@@ -2,7 +2,7 @@ const connection = require('../database/connection')
 
 module.exports = { 
 
-    // Lista os Incidents já ciradas no Banco
+    // Lista os Incidents já criadas no Banco
     async index(request, response){
         const { page = 1 } = request.query 
 
